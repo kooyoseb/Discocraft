@@ -1,0 +1,27 @@
+name: Discocraft
+version: '${version}'
+main: org.kooyoseb.discocraft.Discocraft
+api-version: '26.1.2'
+load: POSTWORLD
+description: Minecraft and Discord bridge. One plugin to end it.
+author: kooyoseb
+
+commands:
+  discocraft:
+    description: Manage the Discocraft bridge.
+    usage: /discocraft <status|reload|reset|send|get|set|events|bot|channel>
+    aliases: [dc]
+    permission: discocraft.admin
+  discord:
+    description: Link your Minecraft account to Discord.
+    usage: /discord <link|unlink|status>
+    aliases: [discordlink, dclink]
+    permission: discocraft.link
+
+permissions:
+  discocraft.admin:
+    description: Allows managing Discocraft.
+    default: op
+  discocraft.link:
+    description: Allows linking a Minecraft account to Discord.
+    default: true

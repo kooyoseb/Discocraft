@@ -1,0 +1,40 @@
+language: ko_kr
+
+discord:
+  enabled: false
+  bot-token: "PUT_YOUR_DISCORD_BOT_TOKEN_HERE"
+  channel-id: "PUT_CHANNEL_ID_HERE"
+  bot-tokens:
+    - "PUT_YOUR_DISCORD_BOT_TOKEN_HERE"
+  channel-ids:
+    - "PUT_CHANNEL_ID_HERE"
+  activity: "Minecraft"
+  console:
+    enabled: false
+    command-prefix: "!mc"
+    allowed-prefixes:
+      - "list"
+      - "say"
+      - "time"
+      - "weather"
+    allowed-role-ids: []
+
+bridge:
+  minecraft-to-discord: true
+  discord-to-minecraft: true
+  discord-events:
+    - alls
+  join-quit-messages: true
+  death-messages: true
+  server-start-stop-messages: true
+  discord-commands: true
+
+format:
+  minecraft-chat: "**%player%**: %message%"
+  discord-label: "&9[Discord]&r"
+  discord-chat: "%label% %user%: %message%"
+  join: ":green_circle: **%player% joined the server**"
+  quit: ":red_circle: **%player% left the server**"
+  death: ":skull: %message%"
+  server-start: ":white_check_mark: **Server online**"
+  server-stop: ":octagonal_sign: **Server offline**"
